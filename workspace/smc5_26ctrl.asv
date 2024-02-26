@@ -119,7 +119,10 @@ sys = [];
 %
 function sys=mdlOutputs(t,x,u)
 gama = 5e6;
+c1 =450;
+k = 800;
 m = 0.1;
+epsi = 200;
 dmax = 5;%这次的控制律中不含d
 cd = 30;
 ksp = 1e4;%弹簧这里缺少了预紧的位移
@@ -133,10 +136,7 @@ p = u(6);    %压力
 
 s = u(7);    %S函数
 dp = u(8);   %状态观测器返回的dp
-c1 = u(9);   %DDPG训练后的c_1
-k = u(10);   %DDPG训练后的k
-epsi = u(11); %DDPG训练后的epsi
-
+c1 = u(
 
 ut = m*c1*(xr2-x2) + m*xr3 + cd*x2 + ksp*x1 +m*epsi*sign(s) + m*k*s+dp;
 %上式中缺少了摩擦力f0，还差了液动力,65是弹簧预紧力
