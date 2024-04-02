@@ -6,6 +6,6 @@ observationInfo = rlNumericSpec([2 1],...
     LowerLimit=[-inf -inf]',...
     UpperLimit=[ inf  inf]');
 observationInfo.Name = "observations";
-observationInfo.Description = "x_error,v_error";
+observationInfo.Description = "ts,x_sum";
 
 agent_second_order = rlDDPGAgent(observationInfo,actionInfo);
