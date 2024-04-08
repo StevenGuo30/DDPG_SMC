@@ -1,3 +1,3 @@
 define_act_obs
-env_DDPG = rlSimulinkEnv("second_order_DDPG","second_order_DDPG/RL Agent")
+env_DDPG = rlSimulinkEnv("second_order_DDPG_change_obs","second_order_DDPG_change_obs/RL Agent")
 reinforcementLearningDesigner

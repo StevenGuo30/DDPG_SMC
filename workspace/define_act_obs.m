@@ -8,4 +8,7 @@ observationInfo = rlNumericSpec([2 1],...
 observationInfo.Name = "observations";
 observationInfo.Description = "ts,x_sum";
 
+% 定义actor以及actor-critic的网络
+actor = rlContinuousDeterministicActor(net,observationInfo,actionInfo);
+
 agent_second_order = rlDDPGAgent(observationInfo,actionInfo);
