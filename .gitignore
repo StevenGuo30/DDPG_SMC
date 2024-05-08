@@ -1,5 +1,6 @@
 #.mat
 *.mat
+!workspace/*.mat
 
 #.I
 *.l
